@@ -1,7 +1,6 @@
 '''
 Programa que simula un cajero automático básico, permitiendo al usuario consultar su saldo y retirar dinero.
 '''
-
 saldo_cliente = 5000
 
 print("--- Bienvenido al Cajero Automático ---")
@@ -14,16 +13,16 @@ try: # bloque para manejar posibles errores en la entrada de datos
             saldo_cliente = saldo_cliente - cantidad_retirar # actualizamos el saldo
             print("Reriro exitoso.") # mostramos un mensaje de éxito
 
-            sobrante = cantidad_retirar # variable para calcular los billetes a entregar
+            monto_restante = cantidad_retirar # variable para calcular los billetes a entregar
 
-            billetes_500 = int(sobrante / 500) # calculamos la cantidad de billetes de 500
-            sobrante = sobrante % 500 # actualizamos el sobrante
+            billetes_500 = int(monto_restante / 500) # calculamos la cantidad de billetes de 500
+            monto_restante = monto_restante % 500 # actualizamos el sobrante
 
-            billetes_200 = int(sobrante / 200) # calculamos la cantidad de billetes de 200
-            sobrante = sobrante % 200 # actualizamos el sobrante
+            billetes_200 = int(monto_restante / 200) # calculamos la cantidad de billetes de 200
+            monto_restante = monto_restante % 200 # actualizamos el sobrante
 
-            billetes_100 = int(sobrante / 100) # calculamos la cantidad de billetes de 100 
-            sobrante = sobrante % 100 # actualizamos el sobrante
+            billetes_100 = int(monto_restante / 100) # calculamos la cantidad de billetes de 100 
+            monto_restante = monto_restante % 100 # actualizamos el sobrante
 
             print("Entregnando...") # mostramos un mensaje
             print("Billetes de 500: ", billetes_500) # mostramos la cantidad
